@@ -1,3 +1,21 @@
+/**
+ *   This file is part of ReplicationBenchmark.
+ *
+ *   ReplicationBenchmark is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation, either version 3 of the License, or
+ *   (at your option) any later version.
+ *
+ *   ReplicationBenchmark is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *   along with ReplicationBenchmark.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ **/
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -72,7 +90,7 @@ public class LogootDocument  extends Document
         if (lg.getType() == TraceOperation.OpType.ins) {
             idTable.add(pos, idToSearch);
             document.add(pos, lg.getContent());
-        } else if (idTable.get(pos) == idToSearch) {
+        } else if (idTable.get(pos).equals(idToSearch)) {
             idTable.remove(pos);
             document.remove(pos);
         }        
